@@ -146,7 +146,7 @@
     	displayResult();
     	/*	ADDING POST	*/	
     		$('#add_post').on('click', function(){
-    			if($('.form_datetime').val() == ""){
+    			if($('.form-control').val() == ""){
     				alert('Please choose date!');
     			}else{
                     $time1 = 575;
