@@ -31,7 +31,7 @@
             $curier_id = $row['id'];
 
         }
-        $res = mysqli_query($conn,"select * from `schedule` WHERE  date_depart BETWEEN '$date_depart_res' and '$stamp_total_time_in_road' or  date_arrival BETWEEN '$date_depart_res' and '$stamp_total_time_in_road'  ");
+        $res = mysqli_query($conn,"select * from `schedule` WHERE (curier_id='$curier_id') and (region_id='$region_id') and (date_depart BETWEEN '$date_depart_res' and '$stamp_total_time_in_road' or  date_arrival BETWEEN '$date_depart_res' and '$stamp_total_time_in_road' ) ");
         if((mysqli_num_rows($res)>0) ){
             echo 'yse';
         }else{ 
